@@ -1,0 +1,317 @@
+{
+  "author": "derric young",
+  "description": "easy",
+  "extensionNamespace": "",
+  "fullName": "border",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWJvcmRlci1zdHlsZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xNSwyMUgxN1YxOUgxNU0xOSwyMUgyMVYxOUgxOU03LDIxSDlWMTlIN00xMSwyMUgxM1YxOUgxMU0xOSwxN0gyMVYxNUgxOU0xOSwxM0gyMVYxMUgxOU0zLDNWMjFINVY1SDIxVjNNMTksOUgyMVY3SDE5IiAvPjwvc3ZnPg==",
+  "name": "border",
+  "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/border-style.svg",
+  "shortDescription": "memeememememe",
+  "version": "1.0",
+  "tags": [
+    "idk"
+  ],
+  "eventsFunctions": [
+    {
+      "description": "add a border",
+      "fullName": "add a border",
+      "functionType": "Action",
+      "name": "border_p1",
+      "sentence": "border x- _PARAM1_ border x+ _PARAM2_ border y- _PARAM3_ border y+ _PARAM4_ size-x _PARAM5_ size-y _PARAM6_ item _PARAM7_",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PosX"
+              },
+              "parameters": [
+                "theobj",
+                "<",
+                "GlobalVariable(left)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "theobj",
+                "=",
+                "GlobalVariable(left)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PosY"
+              },
+              "parameters": [
+                "theobj",
+                "<",
+                "GlobalVariable(up)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "theobj",
+                "=",
+                "GlobalVariable(up)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PosY"
+              },
+              "parameters": [
+                "theobj",
+                ">",
+                "GlobalVariable(down)-GlobalVariable(y size)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "theobj",
+                "=",
+                "GlobalVariable(down)-GlobalVariable(y size)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PosX"
+              },
+              "parameters": [
+                "theobj",
+                ">",
+                "GlobalVariable(right)-GlobalVariable(x size)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "theobj",
+                "=",
+                "GlobalVariable(right)-GlobalVariable(x size)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "x size",
+                "=",
+                "GetArgumentAsNumber(\"sizeobj_x\")"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "left",
+                "=",
+                "GetArgumentAsNumber(\"left\")"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "right",
+                "=",
+                "GetArgumentAsNumber(\"right\")"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "up",
+                "=",
+                "GetArgumentAsNumber(\"up\")"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "down",
+                "=",
+                "GetArgumentAsNumber(\"down\")"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "y size",
+                "=",
+                "GetArgumentAsNumber(\"sizeobj_y\")"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "left wall (set to 0-800 if vertical extended)",
+          "longDescription": "",
+          "name": "left",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "right wall (set to 0-800 if vertical extended)",
+          "longDescription": "",
+          "name": "right",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "roof (set to 0-600 if horonitzal extended)",
+          "longDescription": "",
+          "name": "up",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "ground (set to 0-600 if horonitzal extended)",
+          "longDescription": "",
+          "name": "down",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "the objects wights",
+          "longDescription": "",
+          "name": "sizeobj_x",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "the objects hight",
+          "longDescription": "",
+          "name": "sizeobj_y",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "the object itslfe",
+          "longDescription": "",
+          "name": "theobj",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": []
+}
