@@ -12,13 +12,15 @@
   "tags": [
     "idk"
   ],
+  "dependencies": [],
   "eventsFunctions": [
     {
       "description": "add a border",
       "fullName": "add a border",
       "functionType": "Action",
       "name": "border_p1",
-      "sentence": "border x- _PARAM1_ border x+ _PARAM2_ border y- _PARAM3_ border y+ _PARAM4_ size-x _PARAM5_ size-y _PARAM6_ item _PARAM7_",
+      "private": false,
+      "sentence": "border x- _PARAM1_ border x+ _PARAM2_ border y- _PARAM3_ border y+ _PARAM4_ item _PARAM5_",
       "events": [
         {
           "disabled": false,
@@ -101,7 +103,7 @@
               "parameters": [
                 "theobj",
                 ">",
-                "GlobalVariable(down)-GlobalVariable(y size)"
+                "GlobalVariable(down)-theobj.Height()"
               ],
               "subInstructions": []
             }
@@ -115,7 +117,7 @@
               "parameters": [
                 "theobj",
                 "=",
-                "GlobalVariable(down)-GlobalVariable(y size)"
+                "GlobalVariable(down)-theobj.Height()"
               ],
               "subInstructions": []
             }
@@ -135,7 +137,7 @@
               "parameters": [
                 "theobj",
                 ">",
-                "GlobalVariable(right)-GlobalVariable(x size)"
+                "GlobalVariable(right)-theobj.Width()"
               ],
               "subInstructions": []
             }
@@ -149,7 +151,7 @@
               "parameters": [
                 "theobj",
                 "=",
-                "GlobalVariable(right)-GlobalVariable(x size)"
+                "GlobalVariable(right)-theobj.Width()"
               ],
               "subInstructions": []
             }
@@ -162,18 +164,6 @@
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarGlobal"
-              },
-              "parameters": [
-                "x size",
-                "=",
-                "GetArgumentAsNumber(\"sizeobj_x\")"
-              ],
-              "subInstructions": []
-            },
             {
               "type": {
                 "inverted": false,
@@ -221,18 +211,6 @@
                 "GetArgumentAsNumber(\"down\")"
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarGlobal"
-              },
-              "parameters": [
-                "y size",
-                "=",
-                "GetArgumentAsNumber(\"sizeobj_y\")"
-              ],
-              "subInstructions": []
             }
           ],
           "events": []
@@ -275,26 +253,6 @@
           "description": "ground (set to 0-600 if horonitzal extended)",
           "longDescription": "",
           "name": "down",
-          "optional": false,
-          "supplementaryInformation": "",
-          "type": "expression"
-        },
-        {
-          "codeOnly": false,
-          "defaultValue": "",
-          "description": "the objects wights",
-          "longDescription": "",
-          "name": "sizeobj_x",
-          "optional": false,
-          "supplementaryInformation": "",
-          "type": "expression"
-        },
-        {
-          "codeOnly": false,
-          "defaultValue": "",
-          "description": "the objects hight",
-          "longDescription": "",
-          "name": "sizeobj_y",
           "optional": false,
           "supplementaryInformation": "",
           "type": "expression"
