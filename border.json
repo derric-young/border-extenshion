@@ -220,7 +220,7 @@
         {
           "codeOnly": false,
           "defaultValue": "",
-          "description": "left wall (set to 0-800 if vertical extended)",
+          "description": "West",
           "longDescription": "",
           "name": "left",
           "optional": false,
@@ -230,7 +230,7 @@
         {
           "codeOnly": false,
           "defaultValue": "",
-          "description": "right wall (set to 0-800 if vertical extended)",
+          "description": "East",
           "longDescription": "",
           "name": "right",
           "optional": false,
@@ -240,7 +240,7 @@
         {
           "codeOnly": false,
           "defaultValue": "",
-          "description": "roof (set to 0-600 if horonitzal extended)",
+          "description": "North",
           "longDescription": "",
           "name": "up",
           "optional": false,
@@ -250,7 +250,7 @@
         {
           "codeOnly": false,
           "defaultValue": "",
-          "description": "ground (set to 0-600 if horonitzal extended)",
+          "description": "South",
           "longDescription": "",
           "name": "down",
           "optional": false,
@@ -260,7 +260,7 @@
         {
           "codeOnly": false,
           "defaultValue": "",
-          "description": "the object itslfe",
+          "description": "Object",
           "longDescription": "",
           "name": "theobj",
           "optional": false,
